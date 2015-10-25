@@ -1,23 +1,27 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
-TODO: Write a project description
+ 
+# Swift-Popups
+Swift-Popups is a small convienience class to show modal popups from anywhere in your project
 ## Installation
-TODO: Describe the installation process
+To install, simply copy the Popups.swift file into your project!
 ## Usage
-TODO: Write usage instructions
+To show a popup with multiple buttons:
+
+Popups.SharedInstance.ShowAlert(self, title: "Title goes here", message: "Messages goes here", buttons: ["button one" , "button two"]) { (buttonPressed) -> Void in
+            if buttonPressed == "button one" { 
+              //Code here
+            } else if buttonPressed == "button two" {
+            // Code here
+            }
+        }
+
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-## History
-TODO: Write history
+5. Submit a pull request :D 
 ## Credits
-TODO: Write credits
+Tom Swindell
 ## License
-TODO: Write license
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+MIT license
+
