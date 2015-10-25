@@ -5,7 +5,7 @@ Swift-Popups is a small convienience class to show modal popups from anywhere in
 To install, simply copy the Popups.swift file into your project!
 ## Usage
 To show a popup with multiple buttons:
-
+```
 Popups.SharedInstance.ShowAlert(self, title: "Title goes here", message: "Messages goes here", buttons: ["button one" , "button two"]) { (buttonPressed) -> Void in
             if buttonPressed == "button one" { 
               //Code here
@@ -13,7 +13,7 @@ Popups.SharedInstance.ShowAlert(self, title: "Title goes here", message: "Messag
             // Code here
             }
         }
-
+```
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
