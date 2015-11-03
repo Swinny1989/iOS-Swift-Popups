@@ -10,10 +10,14 @@ import Foundation
 
 class Popups {
     class var SharedInstance: Popups {
-        struct Singleton {
-            static let instance = Popups()
+        struct Static {
+            static var onceToken: dispatch_once_t = 0
+            static var instance: Popups? = nil
         }
-        return Singleton.instance
+        dispatch_once(&Static.onceToken) {
+            Static.instance = Popups()
+        }
+        return Static.instance!
     }
     
     var alertComletion : ((String) -> Void)!
