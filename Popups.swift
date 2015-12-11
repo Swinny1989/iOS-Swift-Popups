@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Popups {
     class var SharedInstance: Popups {
