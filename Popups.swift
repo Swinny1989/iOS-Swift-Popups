@@ -1,6 +1,5 @@
 //
 //  Popups.swift
-//  FLLike
 //
 //  Created by Tom Swindell on 25/05/2015.
 //  Copyright (c) 2015 Tom Swindell. All rights reserved.
