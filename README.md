@@ -1,4 +1,4 @@
-![alt tag](https://travis-ci.org/Swinny1989/iOS-Swift-Popups.svg) 
+
 
 # Swift-Popups
 Swift-Popups is a small convienience class to show modal popups from anywhere in your project
