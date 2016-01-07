@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Popups {
+class Popups: NSObject {
     class var SharedInstance: Popups {
         struct Static {
             static var onceToken: dispatch_once_t = 0
@@ -56,14 +56,6 @@ class Popups {
         
     }
     
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
-        if(self.alertComletion != nil) {
-            self.alertComletion!(self.alertButtons[buttonIndex])
-        }
-    }
-    
-    
-    
     func ShowPopup(title : String, message : String) {
         let alert: UIAlertView = UIAlertView()
         alert.title = title
@@ -71,4 +63,14 @@ class Popups {
         alert.addButtonWithTitle("Ok")
         alert.show()
     }
+}
+
+extension Popups: UIAlertViewDelegate {
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if(self.alertComletion != nil) {
+            self.alertComletion!(self.alertButtons[buttonIndex])
+        }
+    }
+    
 }
